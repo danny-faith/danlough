@@ -1,0 +1,36 @@
+{
+    "processors": ["stylelint-processor-styled-components"],
+    "plugins": ["stylelint-order"],
+    "extends": ["stylelint-config-recommended", "stylelint-config-styled-components"],
+    "rules": {
+        "at-rule-empty-line-before": [
+            "always",
+            {
+                "ignoreAtRules": [
+                    "else",
+                    "extend",
+                    "font-face",
+                    "function",
+                    "if",
+                    "import",
+                    "import-normalize",
+                    "include",
+                    "return"
+                ]
+            }
+        ],
+        "at-rule-no-unknown": null,
+        "declaration-colon-newline-after": null,
+        "indentation": 4,
+        "no-descending-specificity": null,
+        "max-nesting-depth": 3,
+        "number-leading-zero": "always",
+        "order/properties-alphabetical-order": true,
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": ["after-single-line-comment", "first-nested"]
+            }
+        ]
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "extends": ["airbnb", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": 0, // Furlough NextJS proj
+        "react/display-name": 0, // Furlough NextJS proj
+        "react/react-in-jsx-scope": 0, // Furlough NextJS proj
+        "no-confusing-arrow": 0, // Furlough NextJS proj
+        "padded-blocks": 0,
+        "react/jsx-filename-extension": 0,
+        "linebreak-style": ["warn", "windows"],
+        "no-console": 0,
+        "no-plusplus": 0,
+        "arrow-body-style": 0,
+        "quote-props": ["error", "consistent-as-needed"],
+        "comma-dangle": ["error", "only-multiline"],
+        "max-len": 0,
+        "indent": ["error", 4],
+        "react/jsx-indent": ["error", 4],
+        "react/jsx-indent-props": ["error", 4],
+        "no-new": 0,
+        "quotes": ["error", "single"],
+        "@typescript-eslint/explicit-function-return-type": "off"
+    },
+    "env": {
+        "jest": true,
+        "browser": true
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        },
+        "react": {
+            "version": "detect"
+        }
+    }
+}
