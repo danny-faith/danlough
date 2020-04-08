@@ -17,4 +17,5 @@ const StyledButton = styled.button`
     }
 `
 
+
 export default ({ dark, children }) => <StyledButton dark={dark}>{children}</StyledButton>
