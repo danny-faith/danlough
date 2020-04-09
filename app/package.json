@@ -18,6 +18,8 @@
     "@emotion/styled": "^10.0.27",
     "babel-plugin-emotion": "^10.0.33",
     "emotion-theming": "^10.0.27",
+    "mobx": "^5.15.4",
+    "mobx-react": "^6.2.2",
     "next": "^9.3.4",
     "polished": "^3.5.1",
     "react": "^16.13.1",

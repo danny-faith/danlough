@@ -1,1 +1,0 @@
-{"ast":null,"code":"const SomeText = () => '<p>Some text</p>';","map":{"version":3,"sources":["/home/dblythe/Apps/danlough/app/components/SomeText.js"],"names":["SomeText"],"mappings":"AAAA,MAAMA,QAAQ,GAAG,MAAM,kBAAvB","sourcesContent":["const SomeText = () => '<p>Some text</p>'\r\n"]},"metadata":{},"sourceType":"script"}
