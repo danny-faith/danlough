@@ -14,7 +14,8 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "preserve",
-        "typeRoots": ["./node_modules/@types", "./typings"]
+        "typeRoots": ["./node_modules/@types", "./typings"],
+        "experimentalDecorators": true,
     },
-    "include": ["src"]
+    "include": ["app"]
 }
