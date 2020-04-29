@@ -1,6 +1,12 @@
 const theme = {
     colors: {
-        primary: 'hotpink'
+        siteBackground: '#e5ecec',
+        primary: 'hotpink',
+        secondary: '#dbc860',
+        base: 'rgba(0,0,0,0.87)',
+    },
+    padding: {
+        base: '20px',
     }
 }
 
