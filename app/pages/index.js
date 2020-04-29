@@ -1,37 +1,45 @@
-/** @jsx jsx */
-import { ThemeProvider, useTheme } from 'emotion-theming'
-import { Global, css, jsx } from '@emotion/core'
-import appState from '../appState'
-import Button from '../components/Button'
-import SomeText from '../components/SomeText'
-import theme from '../theme'
-import global from '../global'
-import GrandParent from '../components/GrandParent'
-import Parent from '../components/Parent'
-import TimerView from '../components/Timer'
+import Link from 'next/link';
+import fetch from 'isomorphic-unfetch';
+import Product from '../components/Product'
 
-function App() {
-    setInterval(() => {
-        appState.timer += 1
-    }, 1000)
+const PostLink = props => (
+    <li>
+        <Link href="/p/[id]" as={`/p/${props.id}`}>
+            <a>{props.id}</a>
+        </Link>
+    </li>
+)
+
+const Index = (props) => {
     return (
-        // eslint-disable-next-line react/jsx-no-undef
-        <React.Fragment>
-            <Global styles={css`${global}`} />
-            <ThemeProvider theme={theme}>
-                <Button dark theme={theme}>Hello</Button>
-                <Button theme={theme}>No me hello</Button>
-                <SomeText>hello</SomeText>
-                <GrandParent>
-                    GrandParent
-                    <Parent>
-                        Parent
-                    </Parent>
-                </GrandParent>
-                <TimerView appState={appState} />
-            </ThemeProvider>
-        </React.Fragment>
-    );
+        <div>
+            {
+                (props.ingredients) ? (
+                    props.ingredients
+                        .map((product) => (
+                            <Product
+                                key={product.id}
+                                {...product}
+                            />
+                        )
+                    )
+                ) : 'soz'
+            }
+        </div>
+    )
 }
 
-export default App;
+Index.getInitialProps = async function() {
+
+    const res = await fetch('http://localhost:9000/hello');
+    const data = await res.json();
+    console.log('hello');
+
+    console.log(`Show data fetched. Count: ${data.length}`);
+
+    return {
+      ingredients: data.ingredients,
+    };
+};
+
+export default Index;
