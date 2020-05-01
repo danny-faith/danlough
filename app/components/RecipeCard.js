@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import styled from '@emotion/styled'
-import theme from '../theme'
-import { boxShadow } from '../mixins'
+import theme from '../css/theme'
+import { boxShadow } from '../css/mixins'
 
 const scaleAmount = 1.1
 const recipeCardHeight = 400

@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-unfetch';
 import styled from '@emotion/styled'
-import theme from '../../theme'
-import { boxShadow } from '../../mixins'
+import theme from '../../css/theme'
+import { boxShadow } from '../../css/mixins'
 
 const StyledRecipePage = styled.div`
     align-items: center;

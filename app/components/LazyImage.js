@@ -2,27 +2,7 @@ import React, { useState, useEffect } from 'react'
 import useNativeLazyLoading from '@charlietango/use-native-lazy-loading'
 import { useInView } from 'react-intersection-observer'
 import styled from '@emotion/styled'
-import { keyframes } from '@emotion/core'
-
-const fadeIn = keyframes`
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-`
-
-const fadeOut = keyframes`
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-`
+import { fadeIn, fadeOut } from '../css/keyframes'
 
 const StyledLoadedImg = styled.img`
     animation: ${fadeIn} 1s 0s ease;

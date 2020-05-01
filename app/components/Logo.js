@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import theme from '../theme'
+import theme from '../css/theme'
 
 const StyledLogo = styled.div`
     margin-left: ${theme.padding.base};

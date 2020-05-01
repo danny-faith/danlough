@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import theme from '../theme'
+import theme from '../css/theme'
 import LazyImage from './LazyImage'
 
 const StyledProductPage = styled.div`

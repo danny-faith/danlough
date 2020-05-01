@@ -1,6 +1,7 @@
 import { css } from '@emotion/core'
 import theme from './theme'
 import reset from './reset'
+import animations from './animations'
 
 const global = css`
     @font-face {
@@ -50,23 +51,7 @@ const global = css`
         line-height: 2.6rem;
     }
 
-    .my-node-enter {
-        opacity: 0;
-    }
-
-    .my-node-enter-active {
-        opacity: 1;
-        transition: opacity 2000ms;
-    }
-
-    .my-node-exit {
-        opacity: 1;
-    }
-
-    .my-node-exit-active {
-        opacity: 0;
-        transition: opacity 2000ms;
-    }
+    ${animations}
 `
 
 export default global
