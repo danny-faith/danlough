@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styled from '@emotion/styled'
 import theme from '../theme'
 import { boxShadow } from '../mixins'
@@ -10,7 +11,7 @@ const transitionDelay = '0.3s'
 const imageHeight = 250
 
 const StyledRecipeCard = styled.div`
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.5);
     background-image: url(/static/carbonara.jpg);
     background-position-x: center;
     background-position-y: 0px;
@@ -28,14 +29,23 @@ const StyledRecipeCard = styled.div`
         margin ${transitionDuration} ${bezier} ${transitionDelay};
     width: 290px;
 
+    & > a {
+        color: ${theme.colors.primary};
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        z-index: 100;
+    }
+
     div.info {
         left: 30px;
         position: absolute;
         right: 30px;
         top: ${imageHeight + 20}px;
-        z-index: 50;
 
         .category {
+            color: ${theme.colors.secondary};
             display: block;
             font-size: 0.8rem;
             letter-spacing: 0.2rem;
@@ -52,7 +62,7 @@ const StyledRecipeCard = styled.div`
 
         .author {
             span {
-                color: ${theme.colors.secondary}
+                color: ${theme.colors.accent}
             }
         }
     }
@@ -64,9 +74,10 @@ const StyledRecipeCard = styled.div`
         height: 100%;
         opacity: 0;
         position: absolute;
+        top: 0;
         transition: opacity ${transitionDuration} ${bezier} ${transitionDelay};
         width: 100%;
-        z-index: 20;
+        z-index: 50;
     }
 
     &:hover {
@@ -90,14 +101,18 @@ const StyledRecipeCard = styled.div`
 const RecipeCard = () => {
     return (
         <StyledRecipeCard>
-            <div className="info">
-                <span className="category">Recipe</span>
-                <span className="title">Spaghetti all carbonara with guanciale</span>
-                <span className="author">
-                    Author
-                    <span> Daniel Blythe</span>
-                </span>
-            </div>
+            <Link href="/recipe/spaghetti-alla-carbonara">
+                <a>
+                    <div className="info">
+                        <span className="category">Recipe</span>
+                        <span className="title">Spaghetti all carbonara with guanciale</span>
+                        <span className="author">
+                            Author
+                            <span> Daniel Blythe</span>
+                        </span>
+                    </div>
+                </a>
+            </Link>
         </StyledRecipeCard>
     )
 }

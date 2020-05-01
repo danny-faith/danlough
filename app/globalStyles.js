@@ -14,9 +14,9 @@ const global = css`
     }
 
     html {
-        background-color: #e5ecec;
+        background-color: ${theme.colors.siteBackground};
         box-sizing: border-box;
-        color: ${theme.colors.base};
+        color: ${theme.colors.primary};
         font-size: 16px;
     }
 
@@ -27,11 +27,27 @@ const global = css`
     }
 
     a {
-        color: ${theme.colors.base}
+        color: ${theme.colors.accent}
     }
 
     p {
         color: '#ccc !important'
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
     }
 
     .my-node-enter {

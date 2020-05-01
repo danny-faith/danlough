@@ -1,9 +1,9 @@
 const theme = {
     colors: {
-        siteBackground: '#e5ecec',
-        primary: 'hotpink',
-        secondary: '#dbc860',
-        base: 'rgba(0,0,0,0.87)',
+        siteBackground: '#D2DBDD',
+        primary: '#191211',
+        secondary: '#514A4C',
+        accent: '#AD7D52',
     },
     padding: {
         base: '20px',

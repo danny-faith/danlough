@@ -10,6 +10,7 @@ const StyledMenu = styled.div`
     padding: 30px;
 
     a {
+        color: ${theme.colors.primary};
         font-size: 1.1rem;
         font-weight: 700;
         margin: 0 10px;

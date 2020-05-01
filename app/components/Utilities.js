@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import theme from '../theme'
 
 const StyledUtilities = styled.ul`
     display: flex;
@@ -9,6 +10,7 @@ const StyledUtilities = styled.ul`
         list-style: none;
 
         a {
+            color: ${theme.colors.primary};
             font-size: 1.1rem;
             font-weight: 700;
             margin: 0 10px;

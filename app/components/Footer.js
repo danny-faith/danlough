@@ -13,6 +13,7 @@ const StyledFooter = styled.ul`
         list-style: none;
 
         a {
+            color: ${theme.colors.primary};
             padding: 0 ${theme.padding.base};
         }
     }
